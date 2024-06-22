@@ -9,7 +9,7 @@ with open('pipeline_model_linearregression.pkl', 'rb') as file_2:
 
 
 def run():
-    st.markdown("<h1 style='text-align: center;'>EcoEmission Predictor!</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center;'>CO2 Emission Predictor!</h1>", unsafe_allow_html=True)
     st.subheader('Track Your Carbon Footprint')
     st.write('by : Harits Mughni Zakinu')
 
