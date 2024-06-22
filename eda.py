@@ -29,7 +29,7 @@ def run():
                 pada tahun 2021 menurut __Internatioanl Energy Agency__ (_IEA_) sektor transportasi menyumbang sekitar **37%** dari total emisi CO2.
                 Sebuah studi terbaru dari **International Energy Agency** (IEA) menunjukkan bahwa Kanada merupakan salah satu negara yang paling banyak menyumbang Emisi karbon dioksida yang berasal dari transportasi dengan total **206 g/km** pada tahun 2021 ([National Observer](https://www.nationalobserver.com/2019/09/04/analysis/canadian-cars-are-worlds-dirtiest-ev-age-essential)).
                 Seiring dengan peningkatan jumlah kendaraan bermotor, menjadi sebuah tantangan bagi generasi saat ini terutama di Kanada agar dapat menurunkan tingkat emisi CO2. selain itu penting untuk memahami dampak jenis bahan bakar yang digunakan terhadap emisi CO2. Dalam industri otomotif,terdapat beberapa jenis bahan bakar yang umum digunakan, 
-                termasuk bensin reguler, bensin premium, diesel, dan etanol. Setiap jenis bahan bakar memiliki karakteristik yang berbeda dan dapat mempengaruhi tingkat emisi CO2 yang dihasilkan oleh kendaraan. 
+                termasuk reguler gasoline, premium gasoline, diesel, dan ethanol. Setiap jenis bahan bakar memiliki karakteristik yang berbeda dan dapat mempengaruhi tingkat emisi CO2 yang dihasilkan oleh kendaraan. 
                 Dalam konteks ini, perlu analisis perbandingan antara jenis bahan bakar ini dapat memberikan wawasan yang berharga tentang dampak lingkungan yang dihasilkan oleh masing-masing jenis bahan bakar.''')
     st.header('\n')
 
@@ -73,7 +73,7 @@ def run():
 
         st.plotly_chart(fig_fuel)
         st.write('''Jika kita lihat dari jumlah pemakaian jenis bahan. Pemakaian jenis Gasoline sangat mendominasi seperti **Premium Gasoline** sebanyak 409 dan **Regular Gasoline** 331
-        diikuti dengan **Deisel** 18 pemakaian dan **Ethanol** yang hanya 6 pemakaian''')
+        diikuti dengan **Diesel** 18 pemakaian dan **Ethanol** yang hanya 6 pemakaian''')
     
     
     st.header('Hubungan antara Jenis Bahan bakar, Banyaknya Konsumsi Bahan Bakar dan Kapasitas Mesin Terhadap Emisi CO2')
