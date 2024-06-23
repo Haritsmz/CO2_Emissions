@@ -122,13 +122,12 @@ def run():
     left, central,right = st.columns([1,3,1])
     with central:
 
-        fig1 = px.scatter(CO2_Emissions_clean, x='Combined (L/100 km)', y='CO2 emissions (g/km)', color_continuous_scale='blue')
-        fig2 = px.scatter(CO2_Emissions_clean, x='Combined (L/100 km)', y='Engine size (L)', color='Cylinders', color_continuous_scale='viridis')
+        fig1 = px.scatter(CO2_Emissions_clean, x='Combined (L/100 km)', y='CO2 emissions (g/km)')
+        fig2 = px.scatter(CO2_Emissions_clean, x='Combined (L/100 km)', y='Engine size (L)', color='Cylinders', color_continuous_scale='bluess')
 
-        for trace in fig1['data']:
-            fig.add_trace(trace, row=1, col=1)
-        for trace in fig2['data']:
-            fig.add_trace(trace, row=1, col=2)
+        fig = make_subplots(rows=1, cols=2)
+        fig.add_trace(fig1['data'][0], row=1, col=1)
+        fig.add_trace(fig2['data'][0], row=1, col=2)
 
         # Atur rentang sumbu x dan y
         fig.update_xaxes(range=[CO2_Emissions_clean['Combined (L/100 km)'].min(), CO2_Emissions_clean['Combined (L/100 km)'].max()], row=1, col=1)
