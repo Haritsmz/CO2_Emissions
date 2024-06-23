@@ -123,7 +123,7 @@ def run():
     with central:
 
         fig1 = px.scatter(CO2_Emissions_clean, x='Combined (L/100 km)', y='CO2 emissions (g/km)')
-        fig2 = px.scatter(CO2_Emissions_clean, x='Combined (L/100 km)', y='Engine size (L)', color='Cylinders', color_continuous_scale='reds')
+        fig2 = px.scatter(CO2_Emissions_clean, x='Combined (L/100 km)', y='Engine size (L)', color='Cylinders', color_continuous_scale='plasma')
 
         fig = make_subplots(rows=1, cols=2)
         fig.add_trace(fig1['data'][0], row=1, col=1)
