@@ -122,8 +122,8 @@ def run():
     left, central,right = st.columns([1,3,1])
     with central:
 
-        fig1 = px.scatter(CO2_Emissions_clean, x='Combined (L/100 km)', y='CO2 emissions (g/km)')
-        fig2 = px.scatter(CO2_Emissions_clean, x='Combined (L/100 km)', y='Engine size (L)', color='Cylinders', color_continuous_scale='plasma')
+        fig1 = px.scatter(CO2_Emissions_clean, x='Combined (L/100 km)', y='CO2 emissions (g/km)', color_continuous_scale='blue')
+        fig2 = px.scatter(CO2_Emissions_clean, x='Combined (L/100 km)', y='Engine size (L)', color='Cylinders', color_continuous_scale='viridis')
 
         fig = make_subplots(rows=1, cols=2)
         fig.add_trace(fig1['data'][0], row=1, col=1)
