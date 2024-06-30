@@ -31,8 +31,10 @@ def run():
         Fuel_Type = st.selectbox('Fuel Type', ('Premium Gasoline', 'Regular Gasoline', 'Ethanol', 'Diesel'), index=1)
         Engine_Size = st.slider('Engine Size', min_value=1.2, max_value=8.0,value=1.2,step=0.1)
         Cylinders = st.number_input('Cylinders', min_value=3, max_value=16, value=3, step=1)
-        Fuel_Consumption_Liter = st.number_input('Fuel_Consumption (L/100 km)', min_value=4.4, max_value=26.1, value=4.4, step=0.1)
-        Fuel_Consumption_mpg = st.number_input('Fuel_Consumption (mpg)', min_value=11, max_value=64, value=11, step=1)
+        Fuel_Consumption_Liter = st.number_input('Fuel Consumption (L/100 km)', min_value=4.4, max_value=26.1, value=4.4, step=0.1)
+        Fuel_Consumption_mpg = st.number_input('Fuel Consumption (mpg)', min_value=11, max_value=64, value=11, step=1)
+        CO2_rating = st.number_input('CO2 rating', min_value=1, max_value=8, value=11, step=1)
+        Smog_rating = st.number_input('Smog rating', min_value=1, max_value=8, value=11, step=1)
         st.markdown('---')
 
         submitted = st.form_submit_button('Predict')
@@ -46,8 +48,8 @@ def run():
             'Cylinders'       : Cylinders,
             'Combined (L/100 km)'  :Fuel_Consumption_Liter,
             'Combined (mpg)'    : Fuel_Consumption_mpg,
-            'CO2 rating': 0,  
-            'Smog rating': 0  
+            'CO2 rating': CO2_rating,  
+            'Smog rating': Smog_rating  
             }
 
 
