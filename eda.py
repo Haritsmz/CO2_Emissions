@@ -119,7 +119,7 @@ def run():
 
 
  #--------------------------------------------------------
-    left, central,right = st.columns([1,3,1])
+    left, central,right = st.columns([1,2,1])
     with central:
 
         fig1 = px.scatter(CO2_Emissions_clean, x='Combined (L/100 km)', y='CO2 emissions (g/km)')
