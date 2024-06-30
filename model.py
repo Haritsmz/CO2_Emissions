@@ -33,8 +33,8 @@ def run():
         Cylinders = st.number_input('Cylinders', min_value=3, max_value=16, value=3, step=1)
         Fuel_Consumption_Liter = st.number_input('Fuel Consumption (L/100 km)', min_value=4.4, max_value=26.1, value=4.4, step=0.1)
         Fuel_Consumption_mpg = st.number_input('Fuel Consumption (mpg)', min_value=11, max_value=64, value=11, step=1)
-        CO2_rating = st.number_input('CO2 rating', min_value=1, max_value=8, value=11, step=1)
-        Smog_rating = st.number_input('Smog rating', min_value=1, max_value=8, value=11, step=1)
+        CO2_rating = st.number_input('CO2 rating', min_value=1, max_value=8, value=1, step=1)
+        Smog_rating = st.number_input('Smog rating', min_value=1, max_value=8, value=1, step=1)
         st.markdown('---')
 
         submitted = st.form_submit_button('Predict')
