@@ -167,13 +167,14 @@ def run():
         st.plotly_chart(fig3)
     with c2:
         st.subheader('Hasilnya:')
-        st.write('1. Konsumsi bahan bakar Liter per 100 km (Combined (L/100 km)): Memiliki korelasi positif kuat dengan Emisi CO2, menunjukkan bahwa semakin tinggi konsumsi bahan bakar dalam Liter per 100 km(L/100 km), maka semakin tinggi juga jumlah Emisi CO2 yang dihasilkan')
-        st.write('2. Peringkat CO2 (CO2 rating): Memiliki korelasi negatif kuat dengan Emisi CO2, menunjukkan bahwa semakin kecil nilai CO2 rating, maka semakin tinggi Emisi CO2 yang dihasilkan')
-        st.write('3. Konsumsi bahan bakar Miles per Gallon (Combined (mpg)): Memiliki korelasi negatif kuat dengan Emisi CO2, walaupun tidak sekuat faktor-faktor ekonomi dan sosial.')
-        st.write('4. Kapasitas mesin (Engine size (L)) & Silinder (Cylinders): Memiliki korelasi positif kuat dengan Emisi CO2, menunjukkan semakin besar kapasitas mesin & semakin banyak jumlah silinder, maka semakin tinggi Emisi CO2 yang dihasilkan')
-        st.write('5. Peringkat kabut asap (Smog rating): Memiliki korelasi negatif kuat dengan Emisi CO2, menunjukkan bahwa Semakin kecil nilai Smog rating, maka semakin tinggi Emisi CO2 yang dihasilkan')
-
         st.markdown('Hasil korelasi ini menunjukkan bahwa enam faktor yaitu Kapasitas mesin (Engine size (L)), Silinder (Cylinders), Konsumsi bahan bakar Liter per 100 km (Combined (L/100 km), Konsumsi bahan bakar Miles per Gallon (combined (mpg)), Peringkat CO2 (CO2 rating), dan Peringkat Kabut asap (Smog rating) semuanya berkorelasi kuat dengan Emisi CO2 gram per km (CO2 emissions (g/km)). Faktor-faktor tersebut penting dalam mempengaruhi Emisi CO2. Namun, Konsumsi bahan bakar Liter per 100 km, Peringkat CO2, dan Konsumsi bahan bakar Miles per Gallon memiliki peran yang lebih dominan dalam menentukan Emisi CO2 suatu kendaraan.')
+
+    st.write('**Kesimpulan**')
+    st.write('1. Konsumsi bahan bakar Liter per 100 km (Combined (L/100 km)): Memiliki korelasi positif kuat dengan Emisi CO2, menunjukkan bahwa semakin tinggi konsumsi bahan bakar dalam Liter per 100 km(L/100 km), maka semakin tinggi juga jumlah Emisi CO2 yang dihasilkan')
+    st.write('2. Peringkat CO2 (CO2 rating): Memiliki korelasi negatif kuat dengan Emisi CO2, menunjukkan bahwa semakin kecil nilai CO2 rating, maka semakin tinggi Emisi CO2 yang dihasilkan')
+    st.write('3. Konsumsi bahan bakar Miles per Gallon (Combined (mpg)): Memiliki korelasi negatif kuat dengan Emisi CO2, walaupun tidak sekuat faktor-faktor ekonomi dan sosial.')
+    st.write('4. Kapasitas mesin (Engine size (L)) & Silinder (Cylinders): Memiliki korelasi positif kuat dengan Emisi CO2, menunjukkan semakin besar kapasitas mesin & semakin banyak jumlah silinder, maka semakin tinggi Emisi CO2 yang dihasilkan')
+    st.write('5. Peringkat kabut asap (Smog rating): Memiliki korelasi negatif kuat dengan Emisi CO2, menunjukkan bahwa Semakin kecil nilai Smog rating, maka semakin tinggi Emisi CO2 yang dihasilkan')
 
     with st.expander('Apakah Jenis bahan bakar memiliki pengaruh yang Signifikan terhadap Emmisi gas CO2?'):
         st.subheader('Uji Hipotesis Testing (ANOVA)')
