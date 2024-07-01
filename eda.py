@@ -159,7 +159,7 @@ def run():
                          labels=dict(),
                          )
         
-        fig3.update_layout(width=600, height=400)
+        fig3.update_layout(width=800, height=600)
         
     c1,c2 = st.columns((7,3))
     with c1:
