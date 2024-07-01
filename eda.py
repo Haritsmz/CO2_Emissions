@@ -147,8 +147,9 @@ def run():
         st.write('''Jika dilihat korelasi antara konsumsi bahan bakar dengan Emisi gas karbon dioksida maka korelasinya berbanding lurus, semakin besarnya konsumsi bahan bakar maka akan menghasilkan emisi karbon dioksida (CO2)
         yang lebih tinggi. Selain itu tingkat konsumsi bahan bakar juga dipengaruhi oleh besarnya kapasitas mesin mobil yang digunakan. maka dapat disimpulkan bahwa emisi gas karbon dioksida (CO2) sangat dipengaruhi oleh 
         besarnya kapasitas mesin mobil dan juga banyaknya konsumsi bahan bakar yang digunakan''')
-        
-        correlations = df[['Engine size (L)', 'Cylinders', 'Combined (L/100 km)', 'Combined (mpg)', 'CO2 emissions (g/km)', 'CO2 rating', 'Smog rating']].corr()
+
+        num_column = data_train_test.select_dtypes(include=['int64','float64']).columns.tolist()
+        correlations = data_train_test[num_column].corr()
         fig3, ax = plt.subplots(figsize = (6,4))
         sns.heatmap(correlations, annot=True, cmap='coolwarm', cbar=True, ax=ax, fmt=".2g")
         
