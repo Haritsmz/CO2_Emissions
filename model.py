@@ -57,7 +57,6 @@ def run():
 
     if submitted:       
         y_pred = pipeline_model_linearregression.predict(data_inf)
-        formatted_result = f"{y_pred:.2f}"
 
         st.write('The result is :')
         st.write(f'<p style="font-size:40px;">CO2 Emissions : {str(int(y_pred))} g/km</p>', unsafe_allow_html=True)
