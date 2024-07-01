@@ -152,7 +152,7 @@ def run():
         data_train_test = CO2_Emissions_clean.drop(data_inf.index)
         num_column = data_train_test.select_dtypes(include=['int64','float64']).columns.tolist()
         correlations = data_train_test[num_column].corr()
-        fig3, ax = plt.subplots(figsize = (6,4))
+        fig3.update_layout(width=600, height=400)
         sns.heatmap(correlations, annot=True, cmap='coolwarm', cbar=True, ax=ax, fmt=".2g")
         
     c1,c2 = st.columns((7,3))
