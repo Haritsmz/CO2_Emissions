@@ -151,15 +151,14 @@ def run():
         data_inf = CO2_Emissions_clean.sample(13, random_state=23)
         data_train_test = CO2_Emissions_clean.drop(data_inf.index)
         num_column = data_train_test.select_dtypes(include=['int64','float64']).columns.tolist()
-        correlations = data_train_test[num_column].corr()
-        fig3 = ff.create_annotated_heatmap(
-               z=correlations.values,
-               x=list(correlations.columns),
-               y=list(correlations.index),
-               colorscale='coolwarm',
-               showscale=True,
-               annotation_text=correlations.round(2).values
-        )
+        correlations = data_train_test[num_column].corr().round(2)
+        fig3 = px.imshow(correlations,
+                         text_auto=True,
+                         aspect="auto",
+                         color_continuous_scale='coolwarm',
+                         labels=dict(color="Korelasi"),
+                         title='Heatmap Korelasi')
+        
         fig3.update_layout(width=600, height=400)
         
     c1,c2 = st.columns((7,3))
