@@ -8,4 +8,4 @@ CO2 Emissions Predictor adalah sebuah proyek yang bertujuan untuk memprediksi em
       <li>Web Apps (Prediksi Emisi CO2): Menggunakan model machine learning untuk memprediksi emisi CO2 dari kendaraan berdasarkan fitur seperti konsumsi bahan bakar, jenis kendaraan, dan lainnya.</li>
 </ul>
 
-# Klik [disini](https://haritsmz-co2-emissions-app.streamlit.app/) untuk melihat WebApp dari kode ini.
+# Klik [disini](https://haritsmz-co2-emissions.streamlit.app/) untuk melihat WebApp dari kode ini.
