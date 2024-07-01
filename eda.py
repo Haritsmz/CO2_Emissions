@@ -148,7 +148,10 @@ def run():
         yang lebih tinggi. Selain itu tingkat konsumsi bahan bakar juga dipengaruhi oleh besarnya kapasitas mesin mobil yang digunakan. maka dapat disimpulkan bahwa emisi gas karbon dioksida (CO2) sangat dipengaruhi oleh 
         besarnya kapasitas mesin mobil dan juga banyaknya konsumsi bahan bakar yang digunakan''')
 
-        correlations = CO2_Emissions_clean['Engine size (L)', 'Cylinders', 'Combined (L/100 km)', 'Combined (mpg)', 'CO2 rating', 'Smog rating'].corr()
+        data_inf = CO2_Emissions_clean.sample(13, random_state=23)
+        data_train_test = CO2_Emissions_clean.drop(data_inf.index)
+        num_column = data_train_test.select_dtypes(include=['int64','float64']).columns.tolist()
+        correlations = data_train_test[num_column].corr()
         fig3, ax = plt.subplots(figsize = (6,4))
         sns.heatmap(correlations, annot=True, cmap='coolwarm', cbar=True, ax=ax, fmt=".2g")
         
