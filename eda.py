@@ -57,7 +57,7 @@ def run():
     
         st.plotly_chart(fig_make)
         st.write('''Data menampilkan jumlah kendaraan berdasarkan Brand dan kuantitasnya. Dalam gambar diatas, terdapat beberapa merek kendaraan populer.
-                    **Chevrolet** menjadi Brand mobil yang paling populer dengan jumlah pemakaian sebanyak 61 diikuti dengan **Porsche** 59, **Toyota** 54, **Ford** dan lain-lain''')
+                    **Chevrolet** menjadi Brand mobil yang paling populer dengan jumlah pemakaian sebanyak 61 diikuti dengan **Porsche** 59, **Toyota** 54, **Ford** dan lain-lain.''')
     
 
     with table_brand2: 
@@ -73,7 +73,7 @@ def run():
 
         st.plotly_chart(fig_fuel)
         st.write('''Jika kita lihat dari jumlah pemakaian jenis bahan. Pemakaian jenis Gasoline sangat mendominasi seperti **Premium Gasoline** sebanyak 409 dan **Regular Gasoline** 331
-        diikuti dengan **Diesel** 18 pemakaian dan **Ethanol** yang hanya 6 pemakaian''')
+        diikuti dengan **Diesel** 18 pemakaian dan **Ethanol** yang hanya 6 pemakaian.''')
     
     
     st.header('Hubungan antara Jenis Bahan bakar, Banyaknya Konsumsi Bahan Bakar dan Kapasitas Mesin Terhadap Emisi CO2')
@@ -97,7 +97,7 @@ def run():
         st.plotly_chart(fig)
         st.write('''Diatas merupakan gambar dari 5 brand yang paling banyak menghasilkan emisi karbon dioksida.
                     **Bugatti** merupakan brand mobil yang paling banyak menyumbang emisi gas karbon dioksida dengan rataan sebesar **608 g/km**
-                    diikuti dengan **Rolls-Royce, Ferrari, Lamborghini dan Bentley**''')
+                    diikuti dengan **Rolls-Royce, Ferrari, Lamborghini dan Bentley.**''')
     
     with table_fuel2: 
         st.subheader('Bahan bakar yang menghasilkan Emisi CO2 paling banyak')
@@ -114,7 +114,7 @@ def run():
     
         st.plotly_chart(fig)
         st.write('''Jika kita lihat dari jenis bahan bakar, mobil dengan bahan bakar **Ethanol** menjadi yang paling banyak menyumbang gas emisi karbon dioksida (CO2)
-        dan yang bahan bakar yang paling sedikit adalah Regular Gasoline''')
+        dan yang bahan bakar yang paling sedikit adalah Regular Gasoline.''')
 
 
 
@@ -146,7 +146,7 @@ def run():
         st.plotly_chart(fig)
         st.write('''Jika dilihat korelasi antara konsumsi bahan bakar dengan Emisi gas karbon dioksida maka korelasinya berbanding lurus, semakin besarnya konsumsi bahan bakar maka akan menghasilkan emisi karbon dioksida (CO2)
         yang lebih tinggi. Selain itu tingkat konsumsi bahan bakar juga dipengaruhi oleh besarnya kapasitas mesin mobil yang digunakan. maka dapat disimpulkan bahwa emisi gas karbon dioksida (CO2) sangat dipengaruhi oleh 
-        besarnya kapasitas mesin mobil dan juga banyaknya konsumsi bahan bakar yang digunakan''')
+        besarnya kapasitas mesin mobil dan juga banyaknya konsumsi bahan bakar yang digunakan.''')
 
     data_inf = CO2_Emissions_clean.sample(13, random_state=23)
     data_train_test = CO2_Emissions_clean.drop(data_inf.index)
@@ -160,6 +160,7 @@ def run():
                      )
         
     fig3.update_layout(width=750, height=550)
+    st.header('\n')
         
     c1,c2 = st.columns((7,3))
     with c1:
@@ -170,11 +171,11 @@ def run():
         st.markdown('Hasil korelasi ini menunjukkan bahwa enam faktor yaitu Kapasitas mesin (Engine size (L)), Silinder (Cylinders), Konsumsi bahan bakar Liter per 100 km (Combined (L/100 km), Konsumsi bahan bakar Miles per Gallon (combined (mpg)), Peringkat CO2 (CO2 rating), dan Peringkat Kabut asap (Smog rating) semuanya berkorelasi kuat dengan Emisi CO2 gram per km (CO2 emissions (g/km)). Faktor-faktor tersebut penting dalam mempengaruhi Emisi CO2. Namun, Konsumsi bahan bakar Liter per 100 km, Peringkat CO2, dan Konsumsi bahan bakar Miles per Gallon memiliki peran yang lebih dominan dalam menentukan Emisi CO2 suatu kendaraan.')
 
     st.write('**Kesimpulan**')
-    st.write('1. Konsumsi bahan bakar Liter per 100 km (Combined (L/100 km)): Memiliki korelasi positif kuat dengan Emisi CO2, menunjukkan bahwa semakin tinggi konsumsi bahan bakar dalam Liter per 100 km(L/100 km), maka semakin tinggi juga jumlah Emisi CO2 yang dihasilkan')
-    st.write('2. Peringkat CO2 (CO2 rating): Memiliki korelasi negatif kuat dengan Emisi CO2, menunjukkan bahwa semakin kecil nilai CO2 rating, maka semakin tinggi Emisi CO2 yang dihasilkan')
-    st.write('3. Konsumsi bahan bakar Miles per Gallon (Combined (mpg)): Memiliki korelasi negatif kuat dengan Emisi CO2, walaupun tidak sekuat faktor-faktor ekonomi dan sosial.')
-    st.write('4. Kapasitas mesin (Engine size (L)) & Silinder (Cylinders): Memiliki korelasi positif kuat dengan Emisi CO2, menunjukkan semakin besar kapasitas mesin & semakin banyak jumlah silinder, maka semakin tinggi Emisi CO2 yang dihasilkan')
-    st.write('5. Peringkat kabut asap (Smog rating): Memiliki korelasi negatif kuat dengan Emisi CO2, menunjukkan bahwa Semakin kecil nilai Smog rating, maka semakin tinggi Emisi CO2 yang dihasilkan')
+    st.write('1. Konsumsi bahan bakar Liter per 100 km (Combined (L/100 km)): Memiliki korelasi positif kuat dengan Emisi CO2, menunjukkan bahwa semakin tinggi konsumsi bahan bakar dalam Liter per 100 km, maka semakin tinggi juga jumlah Emisi CO2 yang dihasilkan.')
+    st.write('2. Peringkat CO2 (CO2 rating): Memiliki korelasi negatif kuat dengan Emisi CO2, menunjukkan bahwa semakin kecil nilai CO2 rating, maka semakin tinggi Emisi CO2 yang dihasilkan.')
+    st.write('3. Konsumsi bahan bakar Miles per Gallon (Combined (mpg)): Memiliki korelasi negatif kuat dengan Emisi CO2, menunjukkan bahwa semakin tinggi konsumsi bahan bakar dalam Miles per Gallon, maka semakin tinggi Emisi CO2 yang dihasilkan.')
+    st.write('4. Kapasitas mesin (Engine size (L)) & Silinder (Cylinders): Memiliki korelasi positif kuat dengan Emisi CO2, menunjukkan semakin besar kapasitas mesin & semakin banyak jumlah silinder, maka semakin tinggi Emisi CO2 yang dihasilkan.')
+    st.write('5. Peringkat kabut asap (Smog rating): Memiliki korelasi negatif kuat dengan Emisi CO2, menunjukkan bahwa semakin kecil nilai Smog rating, maka semakin tinggi Emisi CO2 yang dihasilkan.')
 
     with st.expander('Apakah Jenis bahan bakar memiliki pengaruh yang Signifikan terhadap Emmisi gas CO2?'):
         st.subheader('Uji Hipotesis Testing (ANOVA)')
