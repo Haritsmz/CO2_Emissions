@@ -155,7 +155,7 @@ def run():
         fig3 = px.imshow(correlations,
                          text_auto=True,
                          aspect="auto",
-                         color_continuous_scale='coolwarm',
+                         color_continuous_scale='viridis',
                          labels=dict(color="Korelasi"),
                          title='Heatmap Korelasi')
         
