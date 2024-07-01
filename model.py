@@ -60,7 +60,7 @@ def run():
         formatted_result = f"{y_pred:.2f}"
 
         st.write('The result is :')
-        st.write(f'<p style="font-size:40px;">CO2 Emissions : {formatted_result} g/km</p>', unsafe_allow_html=True)
+        st.write(f'<p style="font-size:40px;">CO2 Emissions : {str(int(y_pred))} g/km</p>', unsafe_allow_html=True)
         
 
 if __name__ == '__main__':
