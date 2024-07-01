@@ -164,7 +164,7 @@ def run():
     c1,c2 = st.columns((7,3))
     with c1:
         st.markdown('### Heatmap Korelasi')
-        st.pyplot(fig3)
+        st.plotly_chart(fig3)
     with c2:
         st.subheader('Hasilnya:')
         st.write('1. Konsumsi bahan bakar Liter per 100 km (Combined (L/100 km)): Memiliki korelasi positif kuat dengan Emisi CO2, menunjukkan bahwa semakin tinggi konsumsi bahan bakar dalam Liter per 100 km(L/100 km), maka semakin tinggi juga jumlah Emisi CO2 yang dihasilkan')
