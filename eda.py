@@ -148,8 +148,7 @@ def run():
         yang lebih tinggi. Selain itu tingkat konsumsi bahan bakar juga dipengaruhi oleh besarnya kapasitas mesin mobil yang digunakan. maka dapat disimpulkan bahwa emisi gas karbon dioksida (CO2) sangat dipengaruhi oleh 
         besarnya kapasitas mesin mobil dan juga banyaknya konsumsi bahan bakar yang digunakan''')
 
-        num_column = data_train_test.select_dtypes(include=['int64','float64']).columns.tolist()
-        correlations = data_train_test[num_column].corr()
+        correlations = CO2_Emissions_clean['Engine size (L)', 'Cylinders', 'Combined (L/100 km)', 'Combined (mpg)', 'CO2 rating', 'Smog rating'].corr()
         fig3, ax = plt.subplots(figsize = (6,4))
         sns.heatmap(correlations, annot=True, cmap='coolwarm', cbar=True, ax=ax, fmt=".2g")
         
@@ -159,9 +158,9 @@ def run():
         st.pyplot(fig3)
     with c2:
         st.subheader('Hasilnya:')
-        st.write('1. Konsumsi bahan bakar Liter per 100 km (Combined (L/100 km): Memiliki korelasi positif kuat dengan Emisi CO2, menunjukkan bahwa semakin tinggi konsumsi bahan bakar dalam Liter per 100 km(L/100 km), maka semakin tinggi juga jumlah Emisi CO2 yang dihasilkan')
+        st.write('1. Konsumsi bahan bakar Liter per 100 km (Combined (L/100 km)): Memiliki korelasi positif kuat dengan Emisi CO2, menunjukkan bahwa semakin tinggi konsumsi bahan bakar dalam Liter per 100 km(L/100 km), maka semakin tinggi juga jumlah Emisi CO2 yang dihasilkan')
         st.write('2. Peringkat CO2 (CO2 rating): Memiliki korelasi negatif kuat dengan Emisi CO2, menunjukkan bahwa semakin kecil nilai CO2 rating, maka semakin tinggi Emisi CO2 yang dihasilkan')
-        st.write('3. Konsumsi bahan bakar Miles per Gallon (combined (mpg)): Memiliki korelasi negatif kuat dengan Emisi CO2, walaupun tidak sekuat faktor-faktor ekonomi dan sosial.')
+        st.write('3. Konsumsi bahan bakar Miles per Gallon (Combined (mpg)): Memiliki korelasi negatif kuat dengan Emisi CO2, walaupun tidak sekuat faktor-faktor ekonomi dan sosial.')
         st.write('4. Kapasitas mesin (Engine size (L)) & Silinder (Cylinders): Memiliki korelasi positif kuat dengan Emisi CO2, menunjukkan semakin besar kapasitas mesin & semakin banyak jumlah silinder, maka semakin tinggi Emisi CO2 yang dihasilkan')
         st.write('5. Peringkat kabut asap (Smog rating): Memiliki korelasi negatif kuat dengan Emisi CO2, menunjukkan bahwa Semakin kecil nilai Smog rating, maka semakin tinggi Emisi CO2 yang dihasilkan')
 
