@@ -156,8 +156,8 @@ def run():
                          text_auto=True,
                          aspect="auto",
                          color_continuous_scale='viridis',
-                         labels=dict(color="Korelasi"),
-                         title='Heatmap Korelasi')
+                         labels=dict(),
+                         )
         
         fig3.update_layout(width=600, height=400)
         
