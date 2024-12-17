@@ -11,8 +11,6 @@ def run():
     st.markdown("<h1 style='text-align: center;'>Pengaruh Jenis Bahan Bakar Terhadap Emisi CO2</h1>", unsafe_allow_html=True)
     st.header('\n')
     st.subheader('Analisis Perbandingan Bahan Bakar Regular Gasoline, Premium Gasoline, Diesel and Ethanol')
-    st.write('by :  Harits Mughni Zakinu')
-    st.caption('E-mail : haritsmzakinu@gmail.com')
     # Load Data
     with open('CO2_Emissions_clean.pkl', 'rb') as file_1:
         CO2_Emissions_clean= joblib.load(file_1)
